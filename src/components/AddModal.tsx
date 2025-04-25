@@ -164,7 +164,7 @@ const AddModal = ({
                         {taskData.tags.map((tag) => {
                             return (
                                 <div
-                                    key={tag.id}
+                                    key={tag.id} 
                                     data-testid={`tag-${tag.title}`}
                                     className="inline-block mx-1 px-[10px] py-[2px] text-[13px] font-medium rounded-md"
                                     style={{
