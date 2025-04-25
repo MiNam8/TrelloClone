@@ -33,8 +33,5 @@ jobs:
       - name: test project
         run: npm run test
 
-      - name: run project
-        run: npm run dev
-
       - name: test dnd
         run: npm run test:cypress

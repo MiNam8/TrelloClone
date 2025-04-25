@@ -12,8 +12,7 @@
         "test": "vitest",
         "test:ui": "vitest --ui",
         "format": "npx prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-        "test:cypress": "npx cypress run"
-        
+        "test:cypress": "start-server-and-test 'npm run dev' 5173 'npx cypress run'"
     },
     "dependencies": {
         "@tailwindcss/postcss": "^4.1.3",
@@ -55,6 +54,7 @@
         "postcss": "^8.5.3",
         "prettier": "3.5.3",
         "react-dnd-test-backend": "^16.0.1",
+        "start-server-and-test": "^2.0.11",
         "tailwindcss": "^3.4.17",
         "typescript": "~5.7.2",
         "typescript-eslint": "^8.30.1",
