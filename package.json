@@ -9,7 +9,10 @@
         "lint": "eslint .",
         "preview": "vite preview",
         "test": "vitest",
-        "test:ui": "vitest --ui"
+        "test:ui": "vitest --ui",
+        "format": "npx prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+        "test:cypress": "npx cypress run"
+        
     },
     "dependencies": {
         "@tailwindcss/postcss": "^4.1.3",

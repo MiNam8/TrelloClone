@@ -1,5 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DragDropContext, Droppable, Draggable, DropResult } from 'react-beautiful-dnd'
+import {
+    DragDropContext,
+    Droppable,
+    Draggable,
+    DropResult,
+} from 'react-beautiful-dnd'
 import { useState } from 'react'
 import { Board } from '../../data/board'
 import { Columns } from '../../types'
@@ -10,11 +15,11 @@ import Task from '../../components/Task'
 
 // Add this type declaration
 declare global {
-  interface Window {
-    testHelpers: {
-      onDragEnd: (result: any) => void;
-    };
-  }
+    interface Window {
+        testHelpers: {
+            onDragEnd: (result: any) => void
+        }
+    }
 }
 
 const Home = () => {
@@ -34,17 +39,20 @@ const Home = () => {
     const handleAddTask = (taskData: any) => {
         const newBoard = { ...columns }
         newBoard[selectedColumn].items.push(taskData)
-        setColumns(newBoard);
+        setColumns(newBoard)
     }
 
     const handleDragEnd = (result: DropResult) => {
-        onDragEnd(result, columns, setColumns);
-    };
+        onDragEnd(result, columns, setColumns)
+    }
 
     return (
         <>
             <DragDropContext onDragEnd={handleDragEnd}>
-                <div data-testid="board-container" className="w-full flex items-start justify-between px-5 pb-8 md:gap-5 gap-10">
+                <div
+                    data-testid="board-container"
+                    className="w-full flex items-start justify-between px-5 pb-8 md:gap-5 gap-10"
+                >
                     {Object.entries(columns).map(([columnId, column]: any) => {
                         return (
                             <div
