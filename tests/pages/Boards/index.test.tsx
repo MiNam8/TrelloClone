@@ -210,25 +210,4 @@ describe('Home Component', () => {
             expect(columnElement).toHaveAttribute('data-testid', `column-Done`);
         })
     })
-
-    // describe('Drag and Drop', () => {
-
-    //     it('should move a task from backlog to pending column', () => {
-    //         render(<Home />)
-            
-    //         cy.get('[data-testid="column-Backlog"]')
-    //         .find('[data-testid="task-Admin Panel Front-end"]')
-    //         .as('sourceTask').trigger('dragstart');
-
-    //         cy.get('[data-testid="column-Pending"]').as('targetColumn');
-            
-    //         cy.get('@targetColumn')
-    //         .trigger('dragover', { force: true })
-    //         .trigger('drop', { force: true });
-
-    //         cy.get('@targetColumn')
-    //         .find('[data-testid="task-Admin Panel Front-end"]')
-    //     })
-    // })
-
 })
