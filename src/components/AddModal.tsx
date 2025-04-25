@@ -161,19 +161,21 @@ const AddModal = ({
                 <div className="w-full">
                     {taskData.tags && <span>Tags:</span>}
                     <div data-testid="tags-container">
-                        {taskData.tags.map((tag) => (
-                            <div
-                                key={tag.id}
-                                data-testid={`tag-${tag.title}`}
-                                className="inline-block mx-1 px-[10px] py-[2px] text-[13px] font-medium rounded-md"
-                                style={{
-                                    backgroundColor: tag.bg,
-                                    color: tag.text,
-                                }}
-                            >
-                                {tag.title}
-                            </div>
-                        ))}
+                        {taskData.tags.map((tag) => {
+                            return (
+                                <div
+                                    key={tag.id}
+                                    data-testid={`tag-${tag.title}`}
+                                    className="inline-block mx-1 px-[10px] py-[2px] text-[13px] font-medium rounded-md"
+                                    style={{
+                                        backgroundColor: tag.bg,
+                                        color: tag.text,
+                                    }}
+                                >
+                                    {tag.title}
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
                 <div className="w-full flex items-center gap-4 justify-between">

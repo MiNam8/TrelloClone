@@ -21,11 +21,14 @@ jobs:
       - name: build project
         run: npm run build
 
-      - name: format project
-        run: npm run format
+      - name: fix lint
+        run: npm run lint:fix
 
       - name: lint project
         run: npm run lint
+        
+      - name: format project
+        run: npm run format
 
       - name: test project
         run: npm run test

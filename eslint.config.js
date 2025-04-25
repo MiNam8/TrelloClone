@@ -7,6 +7,16 @@ import jsxA11yPlugin from 'eslint-plugin-jsx-a11y'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
 export default [
+    {
+        ignores: [
+            'node_modules/**',
+            'dist/**',
+            'cypress/**',
+            'tests/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/*.spec.{js,jsx,ts,tsx}'
+        ]
+    },
     js.configs.recommended,
     ...tseslint.configs.recommended,
     {
